@@ -9,6 +9,8 @@ $list = [
 ];
 
 foreach ($list as $value) {
-    $exploded = explode(" - ", $value); //trimm, explode, special chars
-    echo $exploded;
+    $exploded = explode(" - ", $value); //trimm, explode, special chars   
+    $newarray = array_map('trim', $exploded);
+    var_dump($newarray);
+    //echo $newarray;
 }
