@@ -62,7 +62,7 @@ foreach ($csv1 as $key => $value) { #accesing array
     $brpu = $value['brojPu'];
     $nas = $value['naselje'];
 
-    if ($oldnazpu !== $nazpu || $oldbrpu !== $brpu) {
+    if ($oldnazpu !== $nazpu || $oldbrpu !== $brpu) { //comparing values when to create new array and put data
         $br++;
         $b = [];
         $b['name'] = $nazpu;
