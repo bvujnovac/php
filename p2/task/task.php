@@ -24,14 +24,26 @@ header('Content-Type: text/plain');
   ],
   //..
   ]; */
-$area = 'Breza';
 
-function getRegionName($area) {
-    foreach ($postalOfficesByRegion as $reg => $val) {
-        var_dump($val);
+function getRegionName($area, $offices) {
+    $isFound = false;
+    foreach ($offices as $reg => $val) {
+        foreach ($val as $number => $are) {
+            if (in_array($area, $are['area'])) {
+                $isFound = true;
+                echo 'Naselje'. ' '. $area . ' '. 'nalazi se pod'. ' '. $reg . ' '. 'županija';
+                echo "\n";
+            }
+        }
+    }
+    if ($isFound) {
+        return;
+    } else {
+        echo "ovo naselje ne postoji";
     }
 }
 
+$collator = collator_create('hr_HR');
 $file = 'postanski-uredi.csv'; //file to access
 $csv1 = array_map('str_getcsv', file($file)); //maping csv to array
 
@@ -56,18 +68,27 @@ foreach ($csv1 as $key => $value) { #accesing array
         $b['name'] = $nazpu;
         $b['zip'] = $brpu;
         $postalOfficesByRegion[$zup][$br] = $b;
+        $postalOfficesByRegion[$zup][$br]['area'][] = $nas;
     } else {
         $postalOfficesByRegion[$zup][$br]['area'][] = $nas;
+        collator_sort($collator, $postalOfficesByRegion[$zup][$br]['area']);
     }
     $oldnazpu = $nazpu;
     $oldbrpu = $brpu;
 }
-ksort($postalOfficesByRegion);
-
-foreach ($postalOfficesByRegion as $reg => $val) {
-    foreach ($val as $number => $are) {
-        if (in_array($area, $are['area'])) {
-            echo "breza je nadena";
-        }
+/////sortin by name
+$price = [];
+foreach ($postalOfficesByRegion as $key => $row) {
+    foreach ($row as $key1 => $rows) {
+        $price[$key1] = $rows['name'];
+        //var_dump($rows['name']);
     }
+    //var_dump($key);
+    //collator_sort($collator, $postalOfficesByRegion[$key]);
+    //array_multisort($price, SORT_ASC, SORT_STRING, $postalOfficesByRegion[$key]);
 }
+//collator_sort($collator, $price);
+//array_multisort($price, $postalOfficesByRegion);
+//var_dump($postalOfficesByRegion[$key][0]['name']);
+//var_dump($postalOfficesByRegion);
+getRegionName("Buzin", $postalOfficesByRegion);
