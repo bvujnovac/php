@@ -45,7 +45,7 @@
             <input placeholder="email adresa" id="email" name="email" type="email" required/>
 
             <label>Password</label>
-            <input name="password" type="text" required pattern="lol | 123"/>
+            <input name="password" type="text" required pattern="lol"/>
 
             <input type="submit" />
             <button type="submit">Posalji</button>

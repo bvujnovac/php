@@ -32,3 +32,24 @@ post kod lozinki itd
 get kod mjenjanja stranica itd.
 unset cooki-a se radi postavljanjem expajera u proslost 
 session na serveru...unset ubija sessiju (sve krece ispocetka xD) session unset, session destroy
+
+
+Here are two ways:
+
+(1) Write a JSON representation of the array object to the file.
+
+$arr = array( [...] );
+file_put_contents( 'data.txt', json_encode( $arr ) );
+Then later...
+
+$data = file_get_contents( 'data.txt' );
+$arr = json_decode( $data );
+(2) Write a serialized representation of the array object to the file.
+
+$arr = array( [...] );
+file_put_contents( 'data.txt', serialize( $arr ) );
+Then later...
+
+$data = file_get_contents( 'data.txt' );
+$arr = unserialize( $data );
+I prefer JSON method, because it doesn't corrupt as easily as serialize. You can open up the data file and make edits to the contents, and it will encode/decode back without big headaches. Serialized data cannot be changed or corrupted, or unserialize() won't work.

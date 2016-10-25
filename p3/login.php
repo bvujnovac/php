@@ -6,6 +6,7 @@
         isset($_POST['password']) && $_POST['password'] == 'phpakademija'
     ) {
         $_SESSION['is_logged_in'] = true;
+        header('Location: /p3/login.php');
     }
 
 ?>
@@ -25,6 +26,8 @@
         <p>Welcome admin, you are now logged in.</p>
 
         <p>Some secret admin only content goes here :]</p>
+        
+        <a href="logout.php">Logout</a>
 
     <?php else: ?>
 
