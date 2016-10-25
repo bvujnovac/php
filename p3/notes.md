@@ -26,3 +26,9 @@ zadaca
 * admin vidi sve prijave uz autentikaciju
 
 
+?iza upitnika kveri string
+html5 input typeovi
+post kod lozinki itd
+get kod mjenjanja stranica itd.
+unset cooki-a se radi postavljanjem expajera u proslost 
+session na serveru...unset ubija sessiju (sve krece ispocetka xD) session unset, session destroy

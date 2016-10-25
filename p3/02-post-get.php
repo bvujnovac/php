@@ -37,17 +37,18 @@
 
 
     <!-- fix this form: method, for, type, require -->
-    <form>
+    <form method="post">
         <fieldset>
             <legend>Info</legend>
 
-            <label>Email</label>
-            <input name="email" type="text" />
+            <label for="email">Email</label>
+            <input placeholder="email adresa" id="email" name="email" type="email" required/>
 
             <label>Password</label>
-            <input name="password" type="text" />
+            <input name="password" type="text" required pattern="lol | 123"/>
 
             <input type="submit" />
+            <button type="submit">Posalji</button>
         </fieldset>
 
     </form>

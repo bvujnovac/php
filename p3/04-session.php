@@ -1,6 +1,6 @@
 <?php
 
-    session_start();
+    session_start();  //mora se imat prije nego sto se ista radi
 
     if(isset($_POST['name'])) {
         $_SESSION['name'] = $_POST['name'];
@@ -26,4 +26,3 @@
 </form>
 </body>
 </html>
-
