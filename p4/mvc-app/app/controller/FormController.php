@@ -7,7 +7,11 @@ class FormController
      */
     public function index()
     {
-        //@todo
+        $view = new View();
+        //$view->layout('layout');
+        $view->render('form', [
+            'message' => 'This is message passed from controller.'
+        ]);
     }
 
     /**
@@ -15,7 +19,8 @@ class FormController
      */
     public function submit()
     {
-        //@todo
+        //@todo save aray to file
+        //var_dump($_POST);
     }
 
     /**
@@ -24,6 +29,7 @@ class FormController
     public function thankyou()
     {
         //@todo
+        echo 'blabla';
     }
 
 }

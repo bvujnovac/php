@@ -24,8 +24,8 @@ class Student
 }
 
 
-var_dump(Student::$counter);
-
+var_dump(Student::$counter);  //umjesto -> :: pristupanje propertiju
+//static se pristupa sa ::
 $student1 = new Student();
 $student2 = new Student();
 

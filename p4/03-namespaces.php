@@ -2,17 +2,17 @@
 
 //namespace needs to go first in file
 
-namespace Ferit;
+namespace Ferit;  //grupiranje koda pod odredeno ime. sve sto je ime klase je kao namespace, kao direktorij
 
 class Student
 {
 
 }
 
-$student1 = new Student();
+$student1 = new Student(); //pretpostavlja po namespace-u
 var_dump($student1);
 
-$student2 = new \Ferit\Student();
+$student2 = new \Ferit\Student(); //zajebi namespace (\)
 var_dump($student2);
 
 

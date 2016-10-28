@@ -23,9 +23,9 @@ var_dump($_POST);
 
         <header>
             <ul>
-                <li><a href="index.php">Naslovnica</a></li>
-                <li><a href="form.php">Prijavi se</a></li>
-                <li><a href="admin.php"> Login (za admine)</a></li>
+                <li><a href="/p4/mvc-app/">Naslovnica</a></li>
+                <li><a href="/p4/mvc-app/form/index">Prijavi se</a></li>
+                <li> Login (za admine)</li>
             </ul>
         </header>
 
@@ -40,7 +40,7 @@ var_dump($_POST);
             </p>
 
             <!-- fix form -->
-            <form method="post">
+            <form action="/p4/mvc-app/form/submit" method="post">
                 <label>Ime i prezime</label>
                 <input type="text" name="name" />
 
@@ -79,7 +79,7 @@ var_dump($_POST);
                 Uploadaj primjer svoga koda:
                 <input type="file">
                 <br><br>
-                <button type="submit">Prijavi se</button>
+                <button type="submit">Submit</button>
             </form>
         </main>
 

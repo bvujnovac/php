@@ -3,7 +3,9 @@
 RewriteEngine On
 
 RewriteCond %{REQUEST_FILENAME} !-f
+#posluzi file ako ima
 RewriteCond %{REQUEST_FILENAME} !-d
+#posluzi folder ako ima
 
 RewriteRule .* index.php [L]
 #RewriteRule (.*) index.php [L,E=PATH_INFO:/$1]

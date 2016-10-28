@@ -1,16 +1,16 @@
 <?php
 header('Content-Type: text/plain');
-
+//include 'classes/Inchoo/Developer.php';
 //class is in classes/Inchoo/Developer.php
-$developer = new \Inchoo\Developer();
-var_dump($developer);
-exit;
+//$developer = new \Inchoo\Developer();
+//var_dump($developer);
+//exit;
 
 
 ////////////
 
 
-spl_autoload_register(function($className) {
+spl_autoload_register(function($className) { // autoloader reagira na new, extends...kad nemoze naci klasu
 
     echo "PHP is including class: $className \n";
 

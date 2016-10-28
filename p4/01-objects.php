@@ -8,6 +8,7 @@ header('Content-Type: text/plain');
  */
 class Student
 {
+    //public, protected, private
     public $university = 'J.J. Strossmayer';
     public $name;
 
@@ -30,7 +31,7 @@ $student2 = new Student('Pero');
 var_dump($student2);
 $student2->echoName();
 
-
+//echo student1->name;
 
 /**
  * Class FeritStudent
@@ -52,3 +53,7 @@ var_dump($student3);
 
 
 //make echoName() private, protected, override, call parent::
+//protected clasa u kojoj je i extendana
+//private samo klasa u kojoj je 
+//override kreiras u klasi koja extenda prvo istoimenu funkciju kao u prvoj
+//konstruktor nemora biti u klasi, potreban je samo u inicijalnom unosu
