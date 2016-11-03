@@ -1,9 +1,8 @@
 <?php
 $file = '/var/www/html/p3/example/prijave.json';
-//if (isset($_POST['name'])) {
-//    file_put_contents($file, json_encode($_POST, true), FILE_APPEND);
-//}
-var_dump($_FILES);
+if (isset($_POST['name'])) {
+    file_put_contents($file, json_encode($_POST, true), FILE_APPEND);
+}
 ?>
 <!DOCTYPE html>
 <html lang="hr">
