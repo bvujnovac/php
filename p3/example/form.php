@@ -1,14 +1,9 @@
 <?php
-/*
-$myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
-$txt = "John Doe\n";
-fwrite($myfile, $txt);
-$txt = "Jane Doe\n";
-fwrite($myfile, $txt);
-fclose($myfile);
-var_dump($_POST);
-
- */
+$file = '/var/www/html/p3/example/prijave.json';
+if (isset($_POST['name'])) {
+    file_put_contents($file, json_encode($_POST, true), FILE_APPEND);
+}
+var_dump($_FILES);
 ?>
 <!DOCTYPE html>
 <html lang="hr">
@@ -40,15 +35,15 @@ var_dump($_POST);
             </p>
 
             <!-- fix form -->
-            <form method="post">
+            <form method="post" enctype="multipart/form-data">
                 <label>Ime i prezime</label>
-                <input type="text" name="name" />
+                <input type="text" name="name"/>
 
                 <label>Mail adresa</label>
-                <input type="email" name="email" />
+                <input type="email" name="email"/>
 
                 <label>Smjer</label>
-                <input type="text" name="study" />
+                <input type="text" name="study"/>
                 <br>
 
                 <label>Godina studija</label>
@@ -60,15 +55,11 @@ var_dump($_POST);
                 <br><br>
 
                 <label>Što te motiviralo da se prijaviš?</label>
-                <textarea type="text" name="motiv">
-
-                </textarea>
+                <textarea type="text" name="motiv"></textarea> <!--close area right after open ends to eliminate whitespaces-->
                 <br>
 
                 <label>Imaš li predznanje vezano uz web development?</label>
-                <textarea type="text" name="preknow">
-
-                </textarea>
+                <textarea type="text" name="preknow"></textarea>
                 <br>
 
                 U kojim jezicima si do sada programirao?
@@ -77,7 +68,7 @@ var_dump($_POST);
                 <br><br>
 
                 Uploadaj primjer svoga koda:
-                <input type="file">
+                <input name="file" type="file">
                 <br><br>
                 <button type="submit">Prijavi se</button>
             </form>

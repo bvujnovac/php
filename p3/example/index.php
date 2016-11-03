@@ -10,7 +10,7 @@
             <ul>
                 <li><a href="index.php">Naslovnica</a></li>
                 <li><a href="form.php">Prijavi se</a></li>
-                <li>Login (za admine)</li>
+                <li><a href="admin.php">Login (za admine)</a></li>
             </ul>
         </header>
 
