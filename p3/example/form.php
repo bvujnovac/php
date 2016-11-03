@@ -1,8 +1,8 @@
 <?php
 $file = '/var/www/html/p3/example/prijave.json';
-if (isset($_POST['name'])) {
-    file_put_contents($file, json_encode($_POST, true), FILE_APPEND);
-}
+//if (isset($_POST['name'])) {
+//    file_put_contents($file, json_encode($_POST, true), FILE_APPEND);
+//}
 var_dump($_FILES);
 ?>
 <!DOCTYPE html>
@@ -35,7 +35,7 @@ var_dump($_FILES);
             </p>
 
             <!-- fix form -->
-            <form method="post" enctype="multipart/form-data">
+            <form action="upload.php" method="post" enctype="multipart/form-data">
                 <label>Ime i prezime</label>
                 <input type="text" name="name"/>
 

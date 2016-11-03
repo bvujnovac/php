@@ -19,9 +19,9 @@ if (isset($_FILES['file'])) {
     }
 
     if (empty($errors) == true) {
-        //move_uploaded_file($file_tmp, "/var/www/html/p3/example/uploads/" . $file_name);
-        //echo "Success";
-        var_dump($_FILES);
+        move_uploaded_file($file_tmp, "D:\Student\\" . $file_name);
+        echo "Success";
+        //var_dump($_FILES);
     } else {
         print_r($errors);
     }
