@@ -8,22 +8,29 @@ if (isset($_POST['name'])) {
 <html lang="hr">
     <head>
         <meta charset="UTF-8">
-        <title>Title</title>
-        <style>
-            input, textarea { display: block; }
-        </style>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <title>PHP Akademija</title>
+
     </head>
     <body>
-
         <header>
-            <ul>
-                <li><a href="index.php">Naslovnica</a></li>
-                <li><a href="form.php">Prijavi se</a></li>
-                <li><a href="admin.php"> Login (za admine)</a></li>
-            </ul>
+            <nav class="nav navbar-default">
+                <div class="container">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.php">Naslovnica</a></li>
+                        <li><a href="form.php">Prijavi se</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="admin.php"> Login (za admine)</a></li>
+                    </ul>
+                </div>
+            </nav>
         </header>
 
-        <main>
+        <main class="container">
 
             <h1>Prijavnica za PHP akademiju</h1>
 
@@ -35,46 +42,55 @@ if (isset($_POST['name'])) {
 
             <!-- fix form -->
             <form action="upload.php" method="post" enctype="multipart/form-data">
-                <label>Ime i prezime</label>
-                <input type="text" name="name"/>
+                <div class="form-group">
+                    <label>Ime i prezime</label>
+                    <input type="text" name="name" class="form-control" required/>
+                </div>
 
-                <label>Mail adresa</label>
-                <input type="email" name="email"/>
+                <div class="form-group">
+                    <label>Mail adresa</label>
+                    <input type="email" name="email" class="form-control" required/>
+                </div>
+                <div class="form-group">
+                    <label>Smjer</label>
+                    <input type="text" name="study" class="form-control" required/>
+                </div>
 
-                <label>Smjer</label>
-                <input type="text" name="study"/>
-                <br>
+                <div class="form-group">
+                    <label>Godina studija</label>
+                    <select name="godina" class="form-control" required>
+                        <option value="1">1.</option>
+                        <option value="2">2.</option>
+                        <option value="3">3.</option>
+                    </select>
 
-                <label>Godina studija</label>
-                <select name="godina">
-                    <option value="1">1.</option>
-                    <option value="2">2.</option>
-                    <option value="3">3.</option>
-                </select>
-                <br><br>
+                    <div class="form-group">
+                        <label>Što te motiviralo da se prijaviš?</label>
+                        <textarea type="text" name="motiv" class="form-control" required></textarea> <!--close area right after open ends to eliminate whitespaces-->
+                    </div>
 
-                <label>Što te motiviralo da se prijaviš?</label>
-                <textarea type="text" name="motiv"></textarea> <!--close area right after open ends to eliminate whitespaces-->
-                <br>
+                    <div class="form-group">
+                        <label>Imaš li predznanje vezano uz web development?</label>
+                        <textarea type="text" name="preknow" class="form-control" required></textarea>
+                    </div>
 
-                <label>Imaš li predznanje vezano uz web development?</label>
-                <textarea type="text" name="preknow"></textarea>
-                <br>
+                    <div class="form-group">
+                        <label>U kojim jezicima si do sada programirao?</label><br>
+                        <label><input name="language[]" type="checkbox" value="C"/>C programski jezik</label>
+                        <label><input name="language[]" type="checkbox" value="PHP"/>PHP</label>
+                    </div>
 
-                U kojim jezicima si do sada programirao?
-                <label><input name="language[]" type="checkbox" value="C" />C programski jezik</label>
-                <label><input name="language[]" type="checkbox" value="PHP"/>PHP</label>
-                <br><br>
+                    <div class="form-group">
+                        <label>Uploadaj primjer svoga koda:</label>
+                        <input name="file" type="file" class="form-control">
+                    </div>
 
-                Uploadaj primjer svoga koda:
-                <input name="file" type="file">
-                <br><br>
-                <button type="submit">Prijavi se</button>
+                    <button type="submit" class="btn btn-default">Prijavi se</button>
             </form>
         </main>
 
-        <footer>
-            <p>&copy; PHP Akademija, 2016</p>
+        <footer class="footer">
+            <p class="container">&copy; PHP Akademija, 2016</p>
         </footer>
 
     </body>
