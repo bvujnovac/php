@@ -36,3 +36,5 @@ robots.txt treba submitat Use Fetch as Google for websites
 https://support.google.com/webmasters/answer/156184?hl=en
 
 migracija attendee tablice (zadatak)
+
+middleware ---kontrla usera, pusti ga (ide prije kontrolera)
