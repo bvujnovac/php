@@ -9,7 +9,7 @@
         <title>PHP Akademija</title>
     </head>
     <body>
-        <header>
+        <header class="modal-header">
             <nav class="nav navbar-default">
                 <div class="container">
                     <ul class="nav navbar-nav">
@@ -41,11 +41,11 @@
             <p>
                 PHP akademija je koncipirana da se kroz nju uči i radi no to vas ne treba uplašiti. Čak štoviše, nadamo se da će vas upravo to motivirati! Predavači iz Inchooa će vas voditi kroz sve vježbe te raditi s vama kako bi svi mogli jednako kvalitetno pratiti predavanja. Program akademije će obuhvatiti lekcije iz web developmenta, a na vama će biti da rješavate domaće zadaće i vježbe.
             </p>
-            <p><img src="green-elephant.jpg"></p>
+            <p><img class="img-responsive" src="green-elephant.jpg"></p>
         </main>
 
         <footer class="footer">
-            <p class="container">&copy; PHP Akademija, 2016</p>
+            <p class="container">&copy; PHP Akademija, 2016 by Benjamin Vujnovac</p>
         </footer>
 
     </body>

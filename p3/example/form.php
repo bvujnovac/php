@@ -16,7 +16,7 @@ if (isset($_POST['name'])) {
 
     </head>
     <body>
-        <header>
+        <header class="modal-header">
             <nav class="nav navbar-default">
                 <div class="container">
                     <ul class="nav navbar-nav">
@@ -82,7 +82,7 @@ if (isset($_POST['name'])) {
 
                     <div class="form-group">
                         <label>Uploadaj primjer svoga koda:</label>
-                        <input name="file" type="file" class="form-control">
+                        <input name="file" type="file">
                     </div>
 
                     <button type="submit" class="btn btn-default">Prijavi se</button>
@@ -90,7 +90,7 @@ if (isset($_POST['name'])) {
         </main>
 
         <footer class="footer">
-            <p class="container">&copy; PHP Akademija, 2016</p>
+            <p class="container">&copy; PHP Akademija, 2016 by Benjamin Vujnovac</p>
         </footer>
 
     </body>
