@@ -36,3 +36,5 @@ naslovnica galerije
 login nekakav(livebox ili page)
 slika page ili livebox
 upload page(stavljanje slike i postavljanja filtera)
+x1080
+x640
