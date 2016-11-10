@@ -29,5 +29,10 @@ https://goo.gl/Q6iY5u
 
 
 //sprajt
+//slikbook
+//vajrfrejming (skica funkcionalnosti)
 
-
+naslovnica galerije
+login nekakav(livebox ili page)
+slika page ili livebox
+upload page(stavljanje slike i postavljanja filtera)
